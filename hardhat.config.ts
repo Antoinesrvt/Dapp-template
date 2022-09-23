@@ -1,17 +1,8 @@
-import "@nomiclabs/hardhat-waffle";
+import { HardhatUserConfig } from "hardhat/config";
+import "@nomicfoundation/hardhat-toolbox";
 
-module.exports = {
-  solidity: "0.8.14",
-    networks: {
-        hardhat: {
-            chainId: 31337,
-            initialBaseFeePerGas: 0,
-        },
-    },
-    paths: {
-        sources: "./contracts",
-        artifacts: "./artifacts",
-        cache: "./cache",
-        tests: "./test",
-    },
+const config: HardhatUserConfig = {
+  solidity: "0.8.17",
 };
+
+export default config;
