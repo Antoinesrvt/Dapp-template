@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
-    <h1>TEST</h1>
+    <h1>APP</h1>
   )
 }
 
