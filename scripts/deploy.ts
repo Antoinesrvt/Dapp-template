@@ -8,10 +8,10 @@ async function main() {
     console.log("Account balance:", (await deployer.getBalance()).toString());
 
     // Deploy contract
-    const Contract = await ethers.getContractFactory("Contract");
-    const contract = await Contract.deploy();
-    await contract.deployed();
-    console.log("Contract contract_name deployed to:", contract.address);
+    const CIDStorage = await ethers.getContractFactory("Contract");
+    const cidStorage = await CIDStorage.deploy();
+    await cidStorage.deployed();
+    console.log("Contract contract_name deployed to:", cidStorage.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

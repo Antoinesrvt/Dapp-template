@@ -2,7 +2,7 @@
 
 pragma solidity 0.8.17;
 
-contract Contract {
+contract CIDStorage {
     //  internal accountStorageByFileName;
     mapping(address => mapping(string => string)) internal AccountToCID;
 
