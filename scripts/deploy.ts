@@ -8,10 +8,10 @@ async function main() {
     console.log("Account balance:", (await deployer.getBalance()).toString());
 
     // Deploy contract
-    const MAJ_contract_name = await ethers.getContractFactory("contract_name");
-    const contract_name = await MAJ_contract_name.deploy();
-    await contract_name.deployed();
-    console.log("Contract contract_name deployed to:", contract_name.address);
+    const Contract = await ethers.getContractFactory("Contract");
+    const contract = await Contract.deploy();
+    await contract.deployed();
+    console.log("Contract contract_name deployed to:", contract.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

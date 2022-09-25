@@ -2,28 +2,29 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import "@nomiclabs/hardhat-ethers";
 import "@nomicfoundation/hardhat-chai-matchers";
+import '@typechain/hardhat';
 
-const pathEnv =
-    process.env.NODE_ENV === "production"
-        ? "./.env.production"
-        : "./.env.local";
+// const pathEnv =
+//     process.env.NODE_ENV === "production"
+//         ? "./.env.production"
+//         : "./.env.local";
 
-require("dotenv").config({ path: pathEnv });
+// require("dotenv").config({ path: pathEnv });
 
-const rinkebyPrivateKey = process.env.RINKEBY_PRIVATE_KEY || "";
-const infuraApiKey = process.env.INFURA_API_KEY || "";
+// const rinkebyPrivateKey = process.env.RINKEBY_PRIVATE_KEY || "";
+// const infuraApiKey = process.env.INFURA_API_KEY || "";
 
 const config: HardhatUserConfig = {
-    solidity: "0.8.14",
+    solidity: "0.8.17",
     networks: {
         hardhat: {
             chainId: 31337,
             initialBaseFeePerGas: 0,
         },
-        rinkeby: {
-            url: `https://rinkeby.infura.io/v3/${infuraApiKey}`,
-            accounts: [rinkebyPrivateKey],
-        },
+        // rinkeby: {
+        //     url: `https://rinkeby.infura.io/v3/${infuraApiKey}`,
+        //     accounts: [rinkebyPrivateKey],
+        // },
     },
     paths: {
         sources: "./contracts",
